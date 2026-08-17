@@ -1,0 +1,359 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Menu */
+.topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 6%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0)
+    );
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e00000;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e00000;
+}
+
+
+/* Parallax */
+.parallax {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding: 120px 8%;
+    position: relative;
+}
+
+
+/* Efeito escuro sobre as imagens */
+.parallax::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.1)
+    );
+}
+
+
+/* Imagens dos carros */
+.corvette {
+    background-image: url("img/corvette.jpg");
+}
+
+.camaro {
+    background-image: url(img/camaro.jpg);
+}
+
+.silverado {
+    background-image: url("img/silverado.jpg");
+}
+
+.tracker {
+    background-image: url("img/tracker.jpg");
+}
+
+.onix {
+    background-image: url("img/onix.jpg");
+}
+
+.eletrico {
+    background-image: url("img/equinox.jpg");
+}
+
+
+/* Textos dos parallax */
+.conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    animation: aparecer 1.2s ease;
+}
+
+.categoria {
+    color: #e00000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.conteudo h1 {
+    font-size: clamp(60px, 9vw, 120px);
+    line-height: 0.9;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+}
+
+.conteudo h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.conteudo p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+
+/* Botões */
+.botao {
+    display: inline-block;
+    padding: 16px 25px;
+    background: #e00000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: white;
+    color: black;
+    transform: translateX(8px);
+}
+
+
+/* Rodapé */
+footer {
+    background: #080808;
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.frase-footer {
+    color: #888;
+    margin-top: 10px;
+}
+
+.links-footer {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.links-footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links-footer a:hover {
+    color: #e00000;
+}
+
+.linha {
+    width: 80%;
+    height: 1px;
+    background: #333;
+    margin: 40px auto 20px;
+}
+
+.copyright {
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* Animação */
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Páginas internas */
+.pagina {
+    min-height: 100vh;
+    padding: 160px 8% 80px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0.95)
+        ),
+        url("img/corvetteC6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.pagina-conteudo {
+    max-width: 800px;
+}
+
+.pagina-conteudo h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 0.9;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+}
+
+.pagina-conteudo p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.email {
+    color: #e00000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.email:hover {
+    color: white;
+}
+
+.mapa {
+    margin-top: 35px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+/* Celular */
+@media (max-width: 800px) {
+
+    .topo {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+        padding: 100px 25px;
+    }
+
+    .conteudo h1 {
+        font-size: 60px;
+    }
+
+    .conteudo h2 {
+        font-size: 22px;
+    }
+
+    .conteudo p {
+        font-size: 16px;
+    }
+
+    .links-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pagina {
+        padding: 130px 25px 60px;
+        background-attachment: scroll;
+    }
+
+    .pagina-conteudo h1 {
+        font-size: 55px;
+    }
+
+    .pagina-conteudo p {
+        font-size: 16px;
+    }
+
+    .mapa iframe {
+        height: 350px;
+    }
+}
