@@ -208,7 +208,7 @@ chevrolet-motors/
     ├── tracker.jpg
     ├── onix.jpg
     ├── eletrico.jpg
-    └── fundo-paginas.jpg
+    └── corvetteC6.jpg
 ```
 
 The project keeps the HTML pages, stylesheet, and image assets organized in a simple structure, making the website easy to understand, edit, and maintain.
@@ -277,11 +277,10 @@ The Chevrolet Motors name used throughout this project is part of the academic c
 
 ## Author
 
+### João Paulo Pedroso Dos Santos
 
-### João Paulo
-
-This project was entirely designed and developed by **João Paulo** as an academic web development project.
+This project was entirely designed and developed by **João Paulo Pedroso Dos Santos** as an academic web development project.
 
 **Developed with HTML5 and CSS3.**
 
-**Brazil — 2026**
+**17/08/2026 - Mallet, Paraná, Brazil**
